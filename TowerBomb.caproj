@@ -10,10 +10,15 @@
     <unique-id>2n3y4yex7uhlc</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -45,13 +50,359 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\GameProramming\Sprites\BomberMan\Blocks\BackgroundTile.png" />
         </object-type>
-        <object-type name="Sprite" sid="720419522851071">
+        <object-type name="Blocks" sid="720419522851071">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="619683181378864">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="267781308344510" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Blocks\SolidBlock.png" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="TurretSpawnSpot" sid="287720156059663">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="383682838132212" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Blocks\Portal.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.8125" y="0.1875" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.8125" y="0.8125" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.1875" y="0.8125" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Creep" sid="926363215737859">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="687723287953047">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Up" pingpong="0" repeatcount="1" repeatto="0" sid="884796382283906" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Back\Creep_B_f00.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Back\Creep_B_f01.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Back\Creep_B_f02.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Back\Creep_B_f03.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Back\Creep_B_f04.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Back\Creep_B_f05.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="0" name="Down" pingpong="0" repeatcount="1" repeatto="0" sid="216522333385720" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Front\Creep_F_f00.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Front\Creep_F_f01.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Front\Creep_F_f02.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Front\Creep_F_f03.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Front\Creep_F_f04.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Front\Creep_F_f05.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="385277248203267" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Side\Creep_S_f00.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Side\Creep_S_f01.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Side\Creep_S_f02.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Side\Creep_S_f03.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Side\Creep_S_f04.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Side\Creep_S_f05.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\GameProramming\Sprites\BomberMan\Creep\Side\Creep_S_f06.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="Left" pingpong="0" repeatcount="1" repeatto="0" sid="723868548027506" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="399828349045030">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Turret" sid="707110187494034">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Up" pingpong="1" repeatcount="1" repeatto="0" sid="654879741421693" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="5" loop="0" name="Down" pingpong="1" repeatcount="1" repeatto="0" sid="113935738650775" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="5" loop="0" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="967101155946135" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="5" loop="0" name="Left" pingpong="0" repeatcount="1" repeatto="0" sid="331581679823505" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Arrivals" sid="488381647999972">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="230115293978217" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CreepSpawn" sid="316540840520790">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="SpawnID" sid="834028691924949" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="129489534203724" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Spawn1" x="0.5" y="0.12" />
+                        <image-point name="Spawn2" x="0.5" y="0.884" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="725964249165576">
+            <plugin id="Function" />
         </object-type>
     </object-folder>
     <families />
@@ -61,7 +412,10 @@
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Mouse" uid="356" />
+        <global-instance type="Function" uid="364" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>
